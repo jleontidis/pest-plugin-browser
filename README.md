@@ -107,6 +107,8 @@ TBD
 - [type](#type)
 - [append](#append)
 - [clear](#clear)
+- [appendSlowly](#appendSlowly)
+- [typeSlowly](#typeSlowly)
 
 ### Checkboxes
 
@@ -262,6 +264,22 @@ Clears the input.
 
 ```php
 $this->clear('#email');
+```
+
+### appendSlowly
+
+Appends some text to the input with a delay.
+
+```php
+$this->appendSlowly('#email', '@pestphp.com', 100);
+```
+
+### typeSlowly
+
+Types some text into the input with a delay.
+
+```php
+$this->typeSlowly('#email', 'jane.doe@pestphp.com', 100);
 ```
 
 ## Available Assertions

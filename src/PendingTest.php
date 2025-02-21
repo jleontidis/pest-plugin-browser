@@ -518,6 +518,26 @@ final class PendingTest
     }
 
     /**
+     * Append text to the given input field slowly.
+     */
+    public function appendSlowly(string $selector, string $text, int $duration = 100): self
+    {
+        $this->operations[] = new Operations\AppendSlowly($selector, $text, $duration);
+
+        return $this;
+    }
+
+    /**
+     * Types text into the given input field slowly.
+     */
+    public function typeSlowly(string $selector, string $text, int $duration = 100): self
+    {
+        $this->operations[] = new Operations\TypeSlowly($selector, $text, $duration);
+
+        return $this;
+    }
+
+    /**
      * Compile the JavaScript test file.
      */
     public function compile(): TestResult
